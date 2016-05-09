@@ -1,0 +1,43 @@
+.table-button {
+    -fx-background-color:transparent;
+    -fx-label-padding: -2;
+}
+.table-button:hover {
+    -fx-background-color: transparent, -fx-outer-border, -fx-inner-border, -fx-body-color !important;
+}
+.table-button:focused {
+    -fx-background-insets: 0, 0, 1, 1;
+}
+
+.hide-column-header .column-header-background {
+        -fx-background-color: transparent; visibility: hidden; -fx-padding: -1em;
+}
+.table-view_1 .column-header {
+    -fx-font-size: 14;
+}
+
+.table-view_1{
+    -fx-font-size: 12.5;
+}
+
+.table-row-cell_1 {
+    -fx-background-color: -fx-table-cell-border-color, -fx-control-inner-background;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+.table-row-cell_1:selected {
+    -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-focus-color;
+    -fx-background-insets: 0, 1, 2;
+}
+
+.table-row-cell_1:odd {
+    -fx-background-color: -fx-table-cell-border-color, derive(-fx-control-inner-background,-5%);
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.table-row-cell_1:selected:odd {
+    -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-focus-color;
+    -fx-background-insets: 0, 1, 2;
+}

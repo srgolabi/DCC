@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox nodeOrientation="RIGHT_TO_LEFT" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dccletter.fxml.changeUserPass.FXMLChangeUserPassController">
+   <children>
+      <VBox style="-fx-font-family: &quot;B Yekan&quot;; -fx-font-size: 15.5;">
+         <children>
+            <Label text="رمز عبور" />
+            <PasswordField fx:id="pass" prefWidth="200.0" promptText="رمز عبور جدید را وارد کنید">
+               <font>
+                  <Font name="B Yekan" size="14.0" />
+               </font>
+            </PasswordField>
+            <Label text="تکرار رمز عبور">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="passAgain" prefWidth="200.0" promptText="رمز عبور جدید را مجددا وارد کنید">
+               <font>
+                  <Font name="B Yekan" size="14.0" />
+               </font>
+            </PasswordField>
+         </children>
+         <padding>
+            <Insets bottom="35.0" left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" spacing="30.0" style="-fx-background-color: #003366;" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="okButton" mnemonicParsing="false" onAction="#ok" prefWidth="75.0" text="قبول">
+               <font>
+                  <Font name="B Yekan" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#close" prefWidth="75.0" text="بستن">
+               <font>
+                  <Font name="B Yekan" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="15.0" top="15.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </children>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</VBox>

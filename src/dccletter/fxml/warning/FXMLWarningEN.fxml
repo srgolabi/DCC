@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dccletter.fxml.warning.FXMLWarningController">
+   <children>
+      <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="label" layoutX="130.0" layoutY="37.0" text="qwerwernf" textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="45.0" left="35.0" right="35.0" top="35.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" spacing="45.0" style="-fx-background-color: #003366;">
+         <children>
+            <Button fx:id="ok" defaultButton="true" focusTraversable="false" layoutX="370.0" layoutY="20.0" mnemonicParsing="false" onAction="#okClick" prefWidth="90.0" text="Ok">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="cancel" cancelButton="true" focusTraversable="false" mnemonicParsing="false" onAction="#cancelClick" prefWidth="90.0" text="Cancel">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </children>
+</VBox>

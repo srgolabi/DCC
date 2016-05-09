@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox nodeOrientation="RIGHT_TO_LEFT" stylesheets="@theme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dccletter.fxml.main.FXMLMainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="فایل">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exitFromUser" text="تغییر کاربر" />
+                  <MenuItem fx:id="mettings" mnemonicParsing="false" onAction="#mettingInsert" text="صورتجلسات" />
+                  <MenuItem mnemonicParsing="false" onAction="#documentInsert" text="Document" />
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="خروج" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="کاربری">
+            <items>
+              <MenuItem fx:id="changeUserPass" mnemonicParsing="false" onAction="#changeUserPassAction" text="تغییر رمز عبور" />
+                  <MenuItem fx:id="manageUser" mnemonicParsing="false" onAction="#userManage" text="مدیریت حسابها" />
+                  <MenuItem fx:id="manageCompanies" mnemonicParsing="false" onAction="#companyManage" text="شرکت ها" />
+                  <MenuItem fx:id="manageActions" mnemonicParsing="false" onAction="#actionsManage" text="پرسنل" />
+                  <MenuItem mnemonicParsing="false" onAction="#groupManage" text="گروه ها" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox>
+         <children>
+            <HBox spacing="15.0" style="-fx-font-family: &quot;B Yekan&quot;; -fx-font-size: 13;">
+               <children>
+                  <Button fx:id="letter_B" mnemonicParsing="false" onAction="#goToLayout" prefWidth="110.0" text="مکاتبات" />
+                  <Button fx:id="doc_B" mnemonicParsing="false" onAction="#goToLayout" prefWidth="110.0" text="نقشه ها" />
+               </children>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+            <HBox>
+               <children>
+                  <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" style="-fx-border-color: #546E7A;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox maxHeight="45.0" prefHeight="45.0" style="-fx-background-color: #78909C; -fx-font-size: 12.5;">
+                           <children>
+                              <Label fx:id="timeAnimation" alignment="CENTER" maxHeight="45.0" maxWidth="1.7976931348623157E308" style="-fx-font-family: &quot;B Yekan&quot;;" text="دوشنبه 15 مهر ماه 1394" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label id="agtpimage" fx:id="logo" nodeOrientation="LEFT_TO_RIGHT" prefHeight="101.0" prefWidth="280.0" style="-fx-font-family: &quot;B Yekan&quot;; -fx-font-size: 12.5;" />
+                        <VBox alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" prefWidth="350.0" spacing="5.0" style="-fx-font-family: &quot;B Yekan&quot;; -fx-font-size: 15.5;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="dayMessage" alignment="BOTTOM_CENTER" style="-fx-background-color: #78909C; -fx-font-size: 13.5;" text="ناذسیبادذیهب ینابیسعهیمتب نتیمندب منتیحخخه منمیتب منتیجبخهج0عب کگورد9 حیخمنن" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <padding>
+                                    <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <StackPane>
+                     <children>
+                        <VBox fx:id="letter_layout" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="25.0" style="-fx-font-family: &quot;B Yekan&quot;; -fx-font-size: 15.5;" visible="false">
+                           <children>
+                              <Button fx:id="letterInsert" mnemonicParsing="false" prefWidth="200.0" text="ثبت نامه" />
+                              <Button fx:id="letterList" mnemonicParsing="false" prefWidth="200.0" text="لیست نامه ها" />
+                              <Button fx:id="search" mnemonicParsing="false" prefWidth="200.0" text="جست و جو" />
+                              <Button fx:id="searchPro" mnemonicParsing="false" prefWidth="200.0" text="گزارش گیری" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="doc_layout" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="25.0" style="-fx-font-family: &quot;B Yekan&quot;; -fx-font-size: 15.5;">
+                           <children>
+                              <Button fx:id="letterInsert2" mnemonicParsing="false" onAction="#documentInsert" prefWidth="200.0" text="ثبت نقشه وارده" />
+                              <Button fx:id="letterList1" mnemonicParsing="false" onAction="#documentPrint" prefWidth="200.0" text="صدور ترانسمیتال" />
+                              <Button mnemonicParsing="false" onAction="#transmittalOutgoing" prefWidth="200.0" text="جست و جو" />
+                              <Button fx:id="searchPro1" mnemonicParsing="false" prefWidth="200.0" text="گزارش گیری" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

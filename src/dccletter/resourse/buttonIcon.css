@@ -1,0 +1,18 @@
+.public-button {
+/*    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 16 16;
+    -fx-size: 30 30;*/
+    /*-fx-padding: 6 14 6 14 ;*/
+}
+
+.add-button {
+    /*-fx-background-image: url('add.png');*/
+}
+.remove-button {
+    /*-fx-background-image: url('fileDelete.png');*/
+}
+.editPen-button {
+    /*-fx-background-image: url('editPen.png');*/
+}
+

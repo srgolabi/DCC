@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import dccletter.fxml.letterTableFull.*?>
+<?import agtp.myControl.*?>
+
+<StackPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="330.0" prefWidth="570.0" style="-fx-font-family: &quot;B Yekan&quot;; -fx-font-size: 13.4; -fx-background-color: #CFD8DC;" stylesheets="@../../../agtp/resourse/css/Button.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agtp.fxml.companyManage.FXMLcompanyManageController">
+   <children>
+      <VBox fx:id="step_1" minHeight="-Infinity" minWidth="-Infinity" style="-fx-font-family: &quot;B Yekan&quot;; -fx-font-size: 13.4; -fx-background-color: #CFD8DC;">
+          <children>
+            <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0">
+               <children>
+                  <MyButtonFont fx:id="edit" mnemonicParsing="false" style="-fx-label-padding: -2;" />
+                  <MyButtonFont fx:id="remove" mnemonicParsing="false" style="-fx-label-padding: -2;" />
+                  <MyButtonFont fx:id="add" mnemonicParsing="false" style="-fx-label-padding: -2;" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+              <TableView fx:id="company_table" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                  <placeholder>
+                      <Label text="موردی یافت نگردید" textFill="#607c89" />
+                  </placeholder>
+                  <columns>
+                      <TableColumn editable="false" prefWidth="75.0" text="نام فارسی">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="company_fa" />
+                          </cellValueFactory>
+                          <cellFactory>
+                              <FormattedTableCellFactory />
+                          </cellFactory>
+                      </TableColumn>
+                      <TableColumn editable="false" prefWidth="75.0" text="Company Name">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="company_en" />
+                          </cellValueFactory>
+                          <cellFactory>
+                              <FormattedTableCellFactory />
+                          </cellFactory>
+                      </TableColumn>
+                      <TableColumn editable="false" maxWidth="3000.0" prefWidth="50.0" text="فعال">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="active" />
+                          </cellValueFactory>
+                          <cellFactory>
+                              <FormattedTableCellFactory />
+                          </cellFactory>
+                      </TableColumn>
+                  </columns>
+                  <columnResizePolicy>
+                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                  </columnResizePolicy>
+                  <VBox.margin>
+                      <Insets left="15.0" right="15.0" />
+                  </VBox.margin>
+              </TableView>
+              <Separator prefWidth="200.0">
+                  <VBox.margin>
+                      <Insets bottom="10.0" top="10.0" />
+                  </VBox.margin>
+              </Separator>
+              <TextField fx:id="filter_company_table" promptText="قبل از افزودن ، نام شرکت مورد نظر را در این قسمت جست و جو کنید">
+                  <VBox.margin>
+                      <Insets bottom="15.0" left="15.0" right="15.0" />
+                  </VBox.margin>
+              </TextField>
+          </children>
+      </VBox>
+      <VBox fx:id="step_2" prefHeight="200.0" prefWidth="100.0" visible="false">
+         <children>
+            <VBox spacing="21.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" text="نام شرکت" />
+                        <TextField fx:id="company_name_fa" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" text="Company Nmae" />
+                        <TextField fx:id="company_name_en" prefHeight="28.0" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" text="نام مختصر" />
+                        <TextField fx:id="summary" prefHeight="28.0" />
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="is_deactive" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="غیر فعال" />
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </padding>
+            </VBox>
+            <Separator maxWidth="1.7976931348623157E308" />
+            <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="50.0" spacing="12.0" style="-fx-background-color: #90A4AE; -fx-font-size: 11;">
+               <children>
+                  <Button fx:id="submit_2" blendMode="HARD_LIGHT" cancelButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="ثبت" />
+                  <Button fx:id="back_2" blendMode="HARD_LIGHT" cancelButton="true" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="بازگشت" />
+               </children>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

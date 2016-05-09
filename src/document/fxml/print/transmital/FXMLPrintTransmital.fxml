@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="820.0" prefWidth="570.0" style="-fx-background-color: #ffffff; -fx-font-family: &quot;Arial&quot;; -fx-font-size: 10;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="105.0" style="-fx-border-color: #000000; -fx-border-width: 1.5;">
+         <children>
+            <VBox prefWidth="110.0" />
+            <VBox alignment="CENTER" style="-fx-border-color: TRANSPARENT #000000; -fx-font-weight: bold; -fx-font-size: 12;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="ASSALUYEH PETROCHEMICAL" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="PHASE II" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="CENTRALIZED TANK FARM" />
+               </children>
+            </VBox>
+            <VBox prefWidth="110.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox style="-fx-border-color: #000000; -fx-border-width: 1.5;">
+         <children>
+            <VBox prefHeight="70.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" style="-fx-border-color: #000000; -fx-border-width: 0 0 1.5 0;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text=" TO: " />
+                        <Label text="ASSALUEY" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" style="-fx-border-color: #000000; -fx-border-width: 0 0 1.5 0;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text=" Att: " />
+                        <Label text="ASSALUEY" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text=" From: " />
+                        <Label text="tehran jonob company" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox style="-fx-border-color: #000000; -fx-border-width: 0 0 0 1.5;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" style="-fx-border-color: #000000; -fx-border-width: 0 0 1.5 0;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text=" Date: " />
+                        <Label text="ASSALUEY" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" style="-fx-border-color: #000000; -fx-border-width: 0 0 1.5 0;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text=" Trans No:" />
+                        <Label text=" ASSALUEY" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text=" Discipline: " />
+                        <Label text="tehran jonob company" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children></HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-border-color: #000000; -fx-border-width: 0 1.5 1.5 1.5;">
+         <children>
+            <Label text=" Dear sirs: " />
+            <Label text="We Are Sending Enclosed Below Mentioned Document /drawing" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin></HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" style="-fx-border-color: #000000; -fx-border-width: 1.5; -fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 9;">
+         <children>
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="25.0" style="-fx-border-color: #000000; -fx-border-width: 0 1.5 0 0;" text="Item" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="145.0" style="-fx-border-color: #000000; -fx-border-width: 0 1.5 0 0;" text="DOC/DWG No" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="25.0" style="-fx-border-color: #000000; -fx-border-width: 0 1.5 0 0;" text="Rev" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: #000000; -fx-border-width: 0 1.5 0 0;" text="DOC/DWG Title" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="30.0" style="-fx-border-color: #000000; -fx-border-width: 0 1.5 0 0;" text="Class" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="33.0" style="-fx-border-color: #000000; -fx-border-width: 0 1.5 0 0;" text="Pages" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="35.0" style="-fx-border-color: #000000; -fx-border-width: 0 1.5 0 0;" text="Copies" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="24.0" style="-fx-border-color: #000000; -fx-border-width: 0 1.5 0 0;" text="Size" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="24.0" text="POI" HBox.hgrow="ALWAYS" />
+         </children></HBox>
+      <VBox spacing="4.0" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets bottom="4.0" top="4.0" />
+         </VBox.margin>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" style="-fx-border-color: #000000; -fx-border-width: 1; -fx-font-size: 9;">
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="25.0" style="-fx-border-color: #000000; -fx-border-width: 0 1 0 0;" text="1" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="145.0" style="-fx-border-color: #000000; -fx-border-width: 0 1 0 0;" text="TJRF-DD-20-90-ME-DWG-012" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="25.0" style="-fx-border-color: #000000; -fx-border-width: 0 1 0 0;" text="D2" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: #000000; -fx-border-width: 0 1 0 0;" text="roof structure" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="30.0" style="-fx-border-color: #000000; -fx-border-width: 0 1 0 0;" text="C2" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="33.0" style="-fx-border-color: #000000; -fx-border-width: 0 1 0 0;" text="104" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="35.0" style="-fx-border-color: #000000; -fx-border-width: 0 1 0 0;" text="4" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="24.0" style="-fx-border-color: #000000; -fx-border-width: 0 1 0 0;" text="A4" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="24.0" text="AFD" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children></VBox>
+      <VBox style="-fx-border-color: #000000; -fx-border-width: 1.5;">
+         <children>
+            <Label text="P.O.I Note:">
+               <VBox.margin>
+                  <Insets bottom="11.0" />
+               </VBox.margin>
+            </Label>
+            <HBox>
+               <children>
+                  <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="1. " />
+                              <CheckBox mnemonicParsing="false" text="Issue For Review (IFR)" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="2. " />
+                              <CheckBox mnemonicParsing="false" text="Issue For Comment (IFC)" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="3. " />
+                              <CheckBox mnemonicParsing="false" text="Issue For Approval (IFA)" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="4. ">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <CheckBox mnemonicParsing="false" text="Approved For Enquery (AFQ)" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="7. " />
+                              <CheckBox mnemonicParsing="false" text="Approved For Construction (AFC)" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="6. " />
+                              <CheckBox mnemonicParsing="false" text="Approved For Design (AFD)" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="7.0" right="7.0" top="7.0" />
+         </padding>
+      </VBox>
+      <HBox style="-fx-border-color: #000000; -fx-border-width: 1.5;">
+         <children>
+            <VBox spacing="25.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="DCC Site:" wrapText="true" />
+                  <Label text="Signatur:" wrapText="true" />
+                  <Label text="Date:" wrapText="true" />
+               </children>
+            </VBox>
+            <VBox spacing="25.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Authorized By:" wrapText="true" />
+                  <Label text="Signatur:" wrapText="true" />
+                  <Label text="Date:" wrapText="true" />
+               </children>
+            </VBox>
+            <VBox spacing="25.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Recipient:" wrapText="true" />
+                  <Label text="Signatur:" wrapText="true" />
+                  <Label text="Date:" wrapText="true" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+</VBox>

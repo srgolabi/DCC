@@ -1,0 +1,8 @@
+.table-view  .scroll-bar:vertical{visibility: visible}
+#menuTable .column-header-background {
+    visibility: hidden; -fx-padding: -1em;
+}
+.action-header{
+    -fx-font-size: 10;
+    -fx-font-family: "B Yekan";
+}

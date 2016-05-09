@@ -1,0 +1,49 @@
+#menuTable .column-header-background {
+    -fx-background-color: transparent; visibility: hidden; -fx-padding: -1em;
+}
+
+#selectTable .column-header-background {
+    -fx-background-color: transparent; visibility: hidden; -fx-padding: -1em;
+}
+
+#buttonColumn {
+    -fx-font-size: 11;
+        -fx-font-family: "B Yekan";
+}
+
+#tree-table-Column {
+    -fx-font-family: "B Yekan";
+    -fx-font-size: 10;
+}
+
+#Column1 {
+    -fx-font-family: "B Yekan";
+    -fx-font-size: 15;
+}
+
+#Column2 {
+    -fx-font-family: "ciyamiconfont";
+    -fx-font-size: 25;
+    -fx-alignment: CENTER;
+}
+
+.tree-table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, -fx-control-inner-background;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    -fx-text-fill: -fx-text-inner-color;
+}
+.tree-table-row-cell:selected {
+    -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-focus-color;
+    -fx-background-insets: 0, 1, 2;
+}
+
+.tree-table-row-cell:odd {
+    -fx-background-color: -fx-table-cell-border-color, derive(-fx-control-inner-background,-5%);
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.tree-table-row-cell:selected:odd {
+    -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-focus-color;
+    -fx-background-insets: 0, 1, 2;
+}

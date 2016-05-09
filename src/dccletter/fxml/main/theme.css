@@ -1,0 +1,6 @@
+#agtpimage {
+    -fx-background-image: url("../../resourse/logo_agtp.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-size: stretch;
+}

@@ -1,0 +1,13 @@
+#menuTable .column-header-background {
+    visibility: hidden; -fx-padding: -1em;
+}
+
+#down-image {
+    -fx-min-width: 28;
+    -fx-min-height: 29;
+    -fx-background-image: url("down.png");
+    -fx-background-size: 10 ,10;
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-radius : 0;
+}

@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.cell.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import dccletter.utils.*?>
+<?import agtp.myControl.*?>
+
+<VBox nodeOrientation="RIGHT_TO_LEFT" prefWidth="700.0" style="-fx-font-family: &quot;B Yekan&quot;; -fx-font-size: 15.5; -fx-background-color: #BBDEFB;" stylesheets="@../../../agtp/resourse/css/Button.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dccletter.fxml.letterInsert.FXMLLetterInsertController">
+    <children>
+        <MenuBar focusTraversable="false" style="-fx-font-size: 13.4;">
+            <menus>
+                <Menu mnemonicParsing="false" text="فایل">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#insertLetter" text="ذخیره">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#zakhireAndnew" text="ذخیره و ایجاد فرم جدید">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#newLetter" text="پاک کردن فرم">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#zakhireAndClose" text="ذخیره و بستن">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="F4" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem onAction="#about" text="درباره ما" />
+                        <MenuItem text="خروج" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="ابزار">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#showSearch" text="جست و جو">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <VBox spacing="10.0">
+            <children>
+                <VBox>
+                    <children>
+                        <HBox prefWidth="200.0" spacing="10.0">
+                            <children>
+                                <VBox HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label text="شماره نامه" textFill="#2e7a8c" />
+                                        <TextField fx:id="number_letter" />
+                                    </children>
+                                </VBox>
+                                <VBox style="-fx-background-color: #39AFD0; -fx-font-size: 14;">
+                                    <children>
+                                        <Label maxWidth="1.7976931348623157E308" minHeight="25.0" prefHeight="25.0" style="-fx-border-color: #78DDFF; -fx-border-width: 2;" text="تاریخ رسید" textFill="WHITE">
+                                            <padding>
+                                                <Insets left="2.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="2.0" style="-fx-background-color: #78DDFF;">
+                                            <children>
+                                                <Label alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" text="13">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <VBox alignment="BOTTOM_CENTER" prefWidth="41.0">
+                                                    <children>
+                                                        <Label text="سال" />
+                                                        <TextField fx:id="letter_receives_yaer" alignment="CENTER" maxWidth="41.0" prefWidth="41.0" />
+                                                    </children>
+                                                </VBox>
+                                                <Label alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" text="/">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <VBox alignment="BOTTOM_CENTER">
+                                                    <children>
+                                                        <Label text="ماه" />
+                                                        <TextField fx:id="letter_receive_month" alignment="CENTER" maxWidth="41.0" prefWidth="41.0" />
+                                                    </children>
+                                                </VBox>
+                                                <Label alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" text="/">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <VBox alignment="BOTTOM_CENTER" prefWidth="41.0">
+                                                    <children>
+                                                        <Label text="روز" />
+                                                        <TextField fx:id="letter_receive_day" alignment="CENTER" maxWidth="41.0" prefWidth="40.0" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="9.0" left="6.0" right="6.0" top="5.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                    </padding>
+                                </VBox>
+                                <VBox style="-fx-background-color: #39AFD0; -fx-font-size: 14;">
+                                    <children>
+                                        <Label maxWidth="1.7976931348623157E308" minHeight="25.0" prefHeight="25.0" style="-fx-border-color: #78DDFF; -fx-border-width: 2;" text="تاریخ نامه" textFill="WHITE">
+                                            <padding>
+                                                <Insets left="2.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="2.0" style="-fx-background-color: #78DDFF;">
+                                            <children>
+                                                <Label alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" text="13">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <VBox alignment="BOTTOM_CENTER" prefWidth="41.0">
+                                                    <children>
+                                                        <Label text="سال" />
+                                                        <TextField fx:id="letter_date_yaer" alignment="CENTER" maxWidth="41.0" prefWidth="41.0" />
+                                                    </children>
+                                                </VBox>
+                                                <Label alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" text="/">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <VBox alignment="BOTTOM_CENTER">
+                                                    <children>
+                                                        <Label text="ماه" />
+                                                        <TextField fx:id="letter_date_month" alignment="CENTER" maxWidth="41.0" prefWidth="41.0" />
+                                                    </children>
+                                                </VBox>
+                                                <Label alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" text="/">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <VBox alignment="BOTTOM_CENTER" prefWidth="41.0">
+                                                    <children>
+                                                        <Label text="روز" />
+                                                        <TextField fx:id="letter_date_day" alignment="CENTER" maxWidth="41.0" prefWidth="40.0" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="9.0" left="6.0" right="6.0" top="5.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <VBox>
+                            <children>
+                                <Label text="موضوع" textFill="#2e7a8c" />
+                                <TextField fx:id="subject">
+                                    <VBox.margin>
+                                        <Insets top="4.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="250.0" spacing="10.0">
+                    <children>
+                        <AnchorPane prefWidth="234.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label text="پیرو/عطف" textFill="#2e7a8c">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <VBox style="-fx-background-color: #39AFD0; -fx-font-size: 14;">
+                                            <children>
+                                                <HBox>
+                                                    <VBox.margin>
+                                                        <Insets bottom="1.0" />
+                                                    </VBox.margin>
+                                                    <children>
+                                                        <TextField fx:id="reffers" prefWidth="177.0">
+                                                            <HBox.margin>
+                                                                <Insets right="1.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                        <MyButtonFont fx:id="addReff" blendMode="MULTIPLY" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefWidth="30.0" textFill="#308096" />
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="refferSelected" prefWidth="200.0" styleClass="hide-column-header">
+                                                    <placeholder>
+                                                        <Label id="selectTable" style="-fx-font-size: 14;" text="فاقد پیرو / عطف" textFill="#308096" />
+                                                    </placeholder>
+                                                    <columns>
+                                                        <TableColumn fx:id="reffColumnButton" minWidth="50.0" prefWidth="50.0" text="C2">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="this" />
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets top="1.0" />
+                                            </VBox.margin>
+                                        </VBox>
+                                        <Separator prefWidth="200.0">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Separator>
+                                        <CheckBox fx:id="askNeed" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="نیاز به جواب دارد" textFill="#2e7a8c">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </CheckBox>
+                                        <Separator prefWidth="200.0">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Separator>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label text="اصل" textFill="#2e7a8c" />
+                                        <TextField fx:id="notification" />
+                                        <Label text="رونوشت" textFill="#2e7a8c">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <TextField fx:id="actions" />
+                                        <TableView fx:id="actionSelected" prefWidth="200.0" styleClass="hide-column-header">
+                                            <placeholder>
+                                                <Label id="selectTable" style="-fx-font-size: 14;" text="فاقد رونوشت" textFill="#308096" />
+                                            </placeholder>
+                                            <columns>
+                                                <TableColumn fx:id="actionColumnButton" minWidth="50.0" prefWidth="50.0" text="C2">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="this" />
+                                                    </cellValueFactory>
+                                                </TableColumn>
+                                            </columns>
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                            </columnResizePolicy>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                                <TableView fx:id="actionMenu" fixedCellSize="25.0" maxHeight="135.0" prefHeight="135.0" styleClass="hide-column-header" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+                                    <placeholder>
+                                        <Label style="-fx-font-size: 14;" text="موردی یافت نشد" textFill="#308096">
+                                            <padding>
+                                                <Insets bottom="3.0" left="2.0" right="2.0" top="2.0" />
+                                            </padding>
+                                        </Label>
+                                    </placeholder>
+                                    <columns>
+                                        <TableColumn prefWidth="75.0">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="nameBaSemat" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                    <effect>
+                                        <DropShadow blurType="GAUSSIAN" color="#888888" height="15.0" offsetY="5.0" radius="8.5" />
+                                    </effect>
+                                </TableView>
+                                <TableView fx:id="notificationMenu" fixedCellSize="25.0" layoutX="10.0" layoutY="10.0" prefHeight="130.0" styleClass="hide-column-header" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+                                    <placeholder>
+                                        <Label style="-fx-font-size: 14;" text="موردی یافت نشد" textFill="#308096">
+                                            <padding>
+                                                <Insets bottom="3.0" left="2.0" right="2.0" top="2.0" />
+                                            </padding>
+                                        </Label>
+                                    </placeholder>
+                                    <columns>
+                                        <TableColumn prefWidth="75.0">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="nameBaSemat" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                    <effect>
+                                        <DropShadow blurType="GAUSSIAN" color="#888888" height="15.0" offsetY="5.0" radius="8.5" />
+                                    </effect>
+                                </TableView>
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </AnchorPane>
+                        <AnchorPane HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label maxWidth="1.7976931348623157E308" text="از" textFill="#2e7a8c" />
+                                        <TextField fx:id="from" />
+
+                                        <Label text="به" textFill="#2e7a8c">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <TextField fx:id="to" />
+                                        <TableView fx:id="toSlected" prefWidth="200.0" styleClass="hide-column-header">
+                                            <placeholder>
+                                                <Label id="selectTable" style="-fx-font-size: 14;" text="فاقد گیرنده" textFill="#308096" />
+                                            </placeholder>
+                                            <columns>
+                                                <TableColumn fx:id="toColumnButton" minWidth="50.0" prefWidth="50.0" text="C2">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="this" />
+                                                    </cellValueFactory>
+                                                </TableColumn>
+                                            </columns>
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                            </columnResizePolicy>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                                <TableView fx:id="toMenu" fixedCellSize="25.0" maxHeight="135.0" prefHeight="135.0" style="-fx-font-size: 14;" styleClass="hide-column-header" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+                                    <placeholder>
+                                        <Label text="موردی یافت نشد" textFill="#308096">
+                                 <padding>
+                                    <Insets bottom="3.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding></Label>
+                                    </placeholder>
+                                    <columns>
+                                        <TableColumn prefWidth="75.0">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="company_fa" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                    <effect>
+                                        <DropShadow blurType="GAUSSIAN" color="#888888" height="15.0" offsetY="5.0" radius="8.5" />
+                                    </effect>
+                                </TableView>
+                                <TableView fx:id="fromMenu" fixedCellSize="25.0" layoutX="10.0" layoutY="10.0" prefHeight="130.0" styleClass="hide-column-header" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+                                    <placeholder>
+                                        <Label style="-fx-font-size: 14;" text="موردی یافت نشد" textFill="#308096">
+                                            <padding>
+                                                <Insets bottom="3.0" left="2.0" right="2.0" top="2.0" />
+                                            </padding>
+                                        </Label>
+                                    </placeholder>
+                                    <columns>
+                                        <TableColumn prefWidth="75.0">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="company_fa" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                    <effect>
+                                        <DropShadow blurType="GAUSSIAN" color="#888888" height="15.0" offsetY="5.0" radius="8.5" />
+                                    </effect>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="149.0" spacing="10.0">
+                    <children>
+                        <StackPane maxWidth="207.0" style="-fx-border-color: #90A4AE; -fx-background-color: #78DDFF;" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <children>
+                                <VBox fx:id="mainPane" alignment="CENTER" spacing="20.0">
+                                    <children>
+                                        <MyButtonFont fx:id="submit" blendMode="MULTIPLY" contentDisplay="RIGHT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#insertLetter" textFill="#308096">
+                                            <graphic>
+                                                <Label text="(Ctrl+S)" textFill="#308096">
+                                                    <font>
+                                                        <Font name="Arial" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                            </graphic>
+                                        </MyButtonFont>
+                                        <MyButtonFont fx:id="clear" blendMode="MULTIPLY" contentDisplay="RIGHT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#newLetter" textFill="#308096">
+                                            <graphic>
+                                                <Label text="(Ctrl+N)" textFill="#308096">
+                                                    <font>
+                                                        <Font name="Arial" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                            </graphic>
+                                        </MyButtonFont>
+                                        <HBox alignment="CENTER">
+                                            <children>
+                                                <Label fx:id="userName" alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-font-size: 12; -fx-opacity: 0.5;" text="کاربر : حمیدرضا دانشجو" HBox.hgrow="ALWAYS">
+                                                    <padding>
+                                                        <Insets right="5.0" />
+                                                    </padding>
+                                                </Label>
+                                                <MyButtonFont fx:id="search_view" blendMode="MULTIPLY" mnemonicParsing="false" onAction="#showSearch" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                                <VBox fx:id="searchPane" style="-fx-font-size: 12.5; -fx-font-family: &quot;B Yekan&quot;;" visible="false" />
+                            </children>
+                        </StackPane>
+                        <VBox maxWidth="221.0" prefWidth="221.0" style="-fx-background-color: #39AFD0;">
+                            <children>
+                                <HBox alignment="CENTER_LEFT">
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="25.0" prefHeight="25.0" style="-fx-border-width: 2; -fx-border-color: #78DDFF;" text="فایلها" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="2.0" />
+                                            </padding>
+                                        </Label>
+                                        <MyButtonFont fx:id="add_file" blendMode="MULTIPLY" maxHeight="3.0" mnemonicParsing="false" prefWidth="30.0" textFill="#308096" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+                                <TableView fx:id="fileSelected" focusTraversable="false" styleClass="hide-column-header" stylesheets="@../../../agtp/resourse/css/FileIcon.css">
+                                    <placeholder>
+                                        <Label id="selectTable" style="-fx-font-size: 14;" text="----" textFill="#39afd0" />
+                                    </placeholder>
+                                    <columns>
+                                        <TableColumn id="buttonColumn" fx:id="fileColumnButton" maxWidth="3000.0" minWidth="50.0" prefWidth="50.0" text="C1">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="thisFile" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                            <padding>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                            </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefWidth="222.0">
+                            <children>
+                                <Separator prefWidth="200.0" />
+                                <CheckBox fx:id="have_attach" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="پیوست دارد؟" textFill="#2e7a8c" VBox.vgrow="ALWAYS" />
+                                <VBox style="-fx-background-color: #39AFD0; -fx-font-size: 14;">
+                                    <children>
+                                        <Label maxWidth="1.7976931348623157E308" minHeight="25.0" prefHeight="25.0" style="-fx-border-color: #78DDFF; -fx-border-width: 2;" text="شماره اندیکاتور" textFill="WHITE">
+                                            <padding>
+                                                <Insets left="2.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="andicator" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="39.0" style="-fx-background-color: #78DDFF;" text="----" textFill="#308096">
+                                            <padding>
+                                                <Insets bottom="9.0" left="6.0" right="6.0" top="5.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+            <VBox.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </VBox.margin>
+        </VBox>
+    </children>
+</VBox>

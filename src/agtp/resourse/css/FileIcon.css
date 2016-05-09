@@ -1,0 +1,93 @@
+.filter-menu-button {
+    -fx-background-image: url('close.png');
+    /*-fx-background-repeat: no-repeat;*/   
+    -fx-background-position: center center;
+    /*-fx-background-color: transparent, transparent, transparent, -fx-body-color !important;*/
+    -fx-background-color: transparent;
+    /*-fx-scale-y: 0.8;*/
+    -fx-background-repeat: stretch;
+    -fx-background-size: stretch auto;
+    -fx-padding: 4 12 4 12 !important;
+}
+.filter-menu-button:hover {
+    /*-fx-background-color: transparent, -fx-outer-border, -fx-inner-border, -fx-body-color !important;*/
+    -fx-background-image: url('close_hover.png');
+}
+.filter-menu-button.active {
+    -fx-background-image: url('funnel-active-icon.png');
+}
+.filter-menu-button.active:hover {
+    -fx-background-image: url('funnel-pencil-active-icon.png');
+}
+.filter-menu-button:focused {
+    /*-fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color !important;*/
+    -fx-background-insets: 0, 0, 1, 1;
+}
+
+.public-button {
+    -fx-background-image: url('null.png');
+    -fx-background-position: center center;
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 16 16;
+    -fx-size: 25 25;
+    -fx-padding: 4 12 4 12 !important;
+    /*-fx-label-padding: -2;*/
+}
+.public-button:hover {
+    -fx-background-color: transparent, -fx-outer-border, -fx-inner-border, -fx-body-color !important;
+}
+.public-button:focused {
+    -fx-background-insets: 0, 0, 1, 1;
+}
+
+.fileDelete-button {
+    -fx-background-image: url('fileDelete.png');
+}
+.fileDownlaod-button {
+    -fx-background-image: url('fileDownlaod.png');
+}
+.fileUp-button {
+    -fx-background-image: url('fileUp.png');
+    -fx-background-size: 7 7;
+    -fx-padding: 0 7 0 7 !important;
+}
+.fileDown-button {
+    -fx-background-image: url('fileDown.png');
+    -fx-background-size: 7 7;
+    -fx-padding: 0 7 0 7 !important;
+}
+
+.pdf-button {
+    -fx-background-image: url('pdf.png');
+}
+.dwg-button {
+    -fx-background-image: url('cad.png');
+}
+.xlsx-button {
+    -fx-background-image: url('excel.png');
+}
+.xls-button {
+    -fx-background-image: url('excel.png');
+}
+.docx-button {
+    -fx-background-image: url('word.png');
+}
+.doc-button {
+    -fx-background-image: url('word.png');
+}
+.bmp-button {
+    -fx-background-image: url('photo.png');
+}
+.png-button {
+    -fx-background-image: url('photo.png');
+}
+.jpg-button {
+    -fx-background-image: url('photo.png');
+}
+.ico-button {
+    -fx-background-image: url('photo.png');
+}
+.psd-button {
+    -fx-background-image: url('photoshop.png');
+}
